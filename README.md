@@ -1,6 +1,6 @@
-# 🍫 Sentiment Analysis: Project Overview
+🍫 Sentiment Analysis: Project Overview
 *   End to end project creating pipline to analyse sentiment in text.
-*   Logistic Regression used to classify sentiment  (Natural Language Processing)
+*   Logistic Regression used to classify sentiment (Natural Language Processing)
 
 ## Table of Contents 
 [Resources](#resources)<br>
@@ -65,11 +65,10 @@ I looked at the distributions of the data and the value counts for the various c
 
 <img src="images/sentiment_distrib.png" />
 
-
 <a name="FeatEng"></a>  
 
 ## [Feature Engineering](Code/P7_Code.ipynb) 
-neattext libray was used to clean text. I also split the data into train and tests sets with a test size of 20%.
+neattext library was used to clean text. I also split the data into train and tests sets with a test size of 20%.
 ```python
 # Viewing cleaning potential of nfx
 dir(nfx)
@@ -85,12 +84,11 @@ data['clean_text'] = data['clean_text'].apply(nfx.remove_stopwords)
 
 ## [ML/DL Model Building](Code/P7_Code.ipynb)
 
-I used a CountVectorizer to find the count of words in each statement. I then added a LogisticRegression algorithm. I get both of these methods into a pipeline for ease of use later. 
+I used a CountVectorizer to find the count of words in each statement. I then added a LogisticRegression algorithm. I fit both methods into a pipeline for ease of use later. 
 ```python
 # Logistic Regression Pipeline
 pipe_lr = Pipeline(steps=[('cv',CountVectorizer()),('lr',LogisticRegression())])
 ```
-
 
 <a name="ModelPerf"></a> 
 
@@ -171,8 +169,7 @@ I built a flask REST API endpoint that was hosted on a local webserver before He
 <a name="Lookahead"></a> 
 
 ## Looking Ahead
-*   Financial markets, sentiment analysis..... ? 
-
+*   Financial markets, sentiment analysis...? 
 
 <a name="Questions"></a> 
 
@@ -180,5 +177,6 @@ I built a flask REST API endpoint that was hosted on a local webserver before He
 For questions, feedback, and contribution requests contact me
 * ### [Click here to email me](mailto:theanalyticsolutions@gmail.com) 
 * ### [See more projects here](https://github.com/MattithyahuData?tab=repositories)
+
 
 
