@@ -1,6 +1,6 @@
-🍫 Sentiment Analysis: Project Overview
-*   End to end project creating pipline to analyse sentiment in text.
-*   Logistic Regression used to classify sentiment (Natural Language Processing)
+#  🍫 Sentiment Analysis: Project Overview
+*  End to end project creating pipline to analyse sentiment in text.
+*  Logistic Regression used to classify sentiment (Natural Language Processing)
 
 ## Table of Contents 
 [Resources](#resources)<br>
