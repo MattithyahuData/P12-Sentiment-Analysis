@@ -1,4 +1,4 @@
-#  🍫 Sentiment Analysis: Project Overview
+#  😀 Sentiment Analysis: Project Overview
 *  End to end project creating pipline to analyse sentiment in text.
 *  Logistic Regression used to classify sentiment (Natural Language Processing)
 
@@ -38,7 +38,7 @@ Powershell command for data import using kaggle API <br>
 ```
 [Data source link](https://www.kaggle.com/pashupatigupta/emotion-detection-from-text)
 [Data](Data/tweet_emotions.csv)
-*  Rows: 40000 | Columns: 3
+*  Rows: 40000 / Columns: 3
     *   tweet_id                   
     *   sentiment                      
     *   content                        
@@ -151,15 +151,7 @@ The Logistic Regression model performed quite poorly on the test set.
 # Checking Accuracy
 pipe_lr.score(X_test,y_test)
 ```
-<!-- 
-<a name="ModelOpt"></a> 
 
-## [Model Optimisation](Code/P12_Code.ipynb)
-In this step, I used GridsearchCV and RandomizedSearchCV to find the best parameters to optimise the performance of the model.
-Using the best parameters, I improved the SVC model accuracy of SVC by **1.3%**. The Logistic Regression model however saw no increase in accuracy. 
-
-*   **Logistic Regression** : Accuracy = 77.92% | MSE = 0.22 | RMSE =  0.47 (2dp)
-*   **SVC** : Accuracy = 77.27%  | MSE = 0.23 | RMSE =  0.48 (2dp)   -->
 
 <a name="ModelEval"></a> 
 
@@ -175,30 +167,6 @@ pipe_lr.predict([extext])
 ### OUTPUT ### 
 array(['love'], dtype=object)
 ``` 
-<!-- 
-*   Logistic Regression 
-<img src="images/Confusionmatrixlog.png" />
-
-*   Support Vector Classification
-<img src="images/Confusionmatrixsvc.png" />
-
-*   Plotting the ROC Curve gave me some key insight to select the best performing model. Although Logistic regression has a higher accuracy value, I selected the SVC model as the ROC Curve shows the SVC to predict more true positives and true negative which is key for deployment and use in unseen data. 
-
-<img src="images/ROC_Curve.png" />
-
-<a name="ModelProd"></a> 
-
-## [Model Productionisation](Code/P12_Code.ipynb)
-*   I used the pickle library to export the model. 
-```python
-# Dump model into pickle file
-pickle.dump(model1, open('.././svc_diabetes.pkl', 'wb'))
-```  
-
-<a name="ModelDeploy"></a> 
-
-## [Deployment](app.py)
-I built a flask REST API endpoint that was hosted on a local webserver before Heroku deployment. The API endpoint takes in request values and returns prediction of diabetes diagnosis. I also optimised and formatted the frontend using HTML and CSS.  -->
 
 <a name="Prjmanage"></a> 
 
